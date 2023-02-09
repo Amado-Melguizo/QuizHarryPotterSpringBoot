@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spring Boot Session Example</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			background-image: url("img/personalidad.jpg");
+			background-size: cover;
+		}
+
+		fieldset {
+			margin-top: 160%;
+			color: black;
+			background-color: gainsboro;
+		}
+
+		.button {
+			color: black;
+			border-color: black;
+		}
+	</style>
+
+</head>
+
+<body>
+	<form action="#" th:action="@{/pregunta7}" method="post">
+		<fieldset>
+
+			<label>
+				<h3> Elige una personalidad:</h3>
+			</label>
+			<br>
+			<label> Valiente:</label>
+			<input type="radio" name="q6" value="1" />
+			<br>
+			<label> Leal:</label>
+			<input type="radio" name="q6" value="2" />
+			<br>
+			<label> Inteligente:</label>
+			<input type="radio" name="q6" value="3" />
+			<br>
+			<label> Ambicioso:</label>
+			<input type="radio" name="q6" value="4" />
+			<br><br>
+			<input class="button" type="submit" />
+		</fieldset>
+	</form>
+</body>
+</html>

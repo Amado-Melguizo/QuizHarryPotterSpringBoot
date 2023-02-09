@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spring Boot Session Example</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			background-image: url("img/lugar.jpg");
+			background-size: cover;
+		}
+
+		fieldset {
+			margin-top: 160%;
+			color: black;
+			background-color: gainsboro;
+		}
+
+		.button {
+			color: black;
+			border-color: black;
+		}
+	</style>
+
+</head>
+
+<body>
+	<form action="#" th:action="@{/pregunta4}" method="post">
+		<fieldset>
+
+			<label>
+				<h3> Elige un lugar:</h3>
+			</label>
+			<br>
+			<label> Torre alta:</label>
+			<input type="radio" name="q3" value="1" />
+			<br>
+			<label> Bodega:</label>
+			<input type="radio" name="q3" value="2" />
+			<br>
+			<label> Torre Baja:</label>
+			<input type="radio" name="q3" value="3" />
+			<br>
+			<label> Mazmorra:</label>
+			<input type="radio" name="q3" value="4" />
+			<br><br>
+			<input class="button" type="submit" />
+		</fieldset>
+	</form>
+</body>
+
+</html>

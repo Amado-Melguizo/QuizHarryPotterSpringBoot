@@ -1,0 +1,74 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css"
+		integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
+
+	<style type="text/css">
+		body {
+			display: flex;
+			justify-content: center;
+			background-image: url("img/resultado.jpg");
+			background-size: cover;
+			color: white;
+		}
+
+		#main_wrapper {
+			width: 80%;
+			margin: auto;
+		}
+
+		.listaUsuarios {
+			display: content;
+			margin-top: auto;
+			width: 50%;
+			float: left;
+		}
+		
+		h1 {
+			text-align: center;
+			padding-bottom: 100px;
+		}
+
+		h2 {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="listaUsuarios">
+		<h2> Usuarios <h2>
+				<table class="table">
+					<thead>
+						<tr>
+							<th scope="col">Id</th>
+							<th scope="col">Usuario</th>
+							<th scope="col">Casa</th>
+							<th scope="col">Puntos</th>
+							<th scope="col">Borrar</th>
+							<th scope="col">Modificar</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr th:each="user: ${users}">
+							<td th:text="${user.id}" />
+							<td th:text="${user.nombre}" />
+							<td th:text="${user.casa}" />
+							<td th:text="${user.puntos}" />
+							<td><a class="btn btn-danger borrar" th:href="@{/borraruser/{id}(id=${user.id})}"><i
+										class="fas fa-trash"></i></a></a></td>
+							<td><a class="btn btn-success editar" th:href="@{/editaruser/{id}(id=${user.id})}"><i
+										class="fas fa-edit"></i></a></a></td>
+						</tr>
+
+					</tbody>
+				</table>
+				<form th:action="@{/destroy}" method="post">
+					<input type="submit" value="Volver al Inicio" />
+				</form>
+	</div>
+</body>
+
+</html>

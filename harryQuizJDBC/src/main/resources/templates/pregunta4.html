@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spring Boot Session Example</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			background-image: url("img/colores.jpg");
+			background-size: cover;
+		}
+
+		fieldset {
+			margin-top: 160%;
+			color: black;
+			background-color: gainsboro;
+		}
+
+		.button {
+			color: black;
+			border-color: black;
+		}
+	</style>
+
+</head>
+
+<body>
+	<form action="#" th:action="@{/pregunta5}" method="post">
+		<fieldset>
+
+			<label>
+				<h3> Elige un color:</h3>
+			</label>
+			<br>
+			<label> Escarlata:</label>
+			<input type="radio" name="q4" value="1" />
+			<br>
+			<label> Amarillo:</label>
+			<input type="radio" name="q4" value="2" />
+			<br>
+			<label> Azul:</label>
+			<input type="radio" name="q4" value="3" />
+			<br>
+			<label> Verde:</label>
+			<input type="radio" name="q4" value="4" />
+			<br><br>
+			<input class="button" type="submit" />
+		</fieldset>
+	</form>
+</body>
+</html>
+

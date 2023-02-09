@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Griffindor</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			background-image: url("img/clasificacion.jpg");
+			background-size: cover;
+			color: white;
+		}
+
+		img {
+			max-width: 35%;
+			margin-left: 35%;
+		}
+
+		p {
+			margin-left: 40%;
+			width: 25%;
+			background-color: white;
+			color: black;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div>
+		<img src="img/gryffindor.jpg" />
+		<p>
+			La Casa de Gryffindor valora el coraje por encima de todo, pero también la osadía,
+			el temple y la caballerosidad. Sus estudiantes son valientes,
+			pero también muy imprudentes.
+		</p>
+		<p>Colores: Escarlata y oro.</p>
+		<form th:action="@{/destroy}" method="post">
+			<input type="submit" value="Volver al Inicio" />
+		</form>
+		<form th:action="@{/clasificacion}">
+			<input type="submit" value="Clasificacion" />
+		</form>
+	</div>
+</body>
+
+</html>
