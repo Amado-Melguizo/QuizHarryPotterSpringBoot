@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spring Boot Session Example</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			background-image: url("img/tara.jpg");
+			background-size: cover;
+		}
+
+		fieldset {
+			margin-top: 80%;
+			color: black;
+			background-color: gainsboro;
+		}
+
+		.button {
+			color: black;
+			border-color: black;
+		}
+	</style>
+
+</head>
+
+<body>
+	<form action="#" th:action="@{/resultado}" method="post">
+		<fieldset>
+
+			<label>
+				<h3> Que tara/personalidad negativa te identifica:</h3>
+			</label>
+			<br>
+			<label> Imprudentes:</label>
+			<input type="radio" name="q7" value="1" />
+			<br>
+			<label> Despistados:</label>
+			<input type="radio" name="q7" value="2" />
+			<br>
+			<label> Excentricos:</label>
+			<input type="radio" name="q7" value="3" />
+			<br>
+			<label> Antisocial:</label>
+			<input type="radio" name="q7" value="4" />
+			<br><br>
+			<input class="button" type="submit" />
+		</fieldset>
+	</form>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Hufflepuf</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			background-image: url("img/clasificacion.jpg");
+			background-size: cover;
+			color: white;
+		}
+
+		img {
+			max-width: 35%;
+			margin-left: 35%;
+		}
+
+		p {
+			margin-left: 40%;
+			width: 25%;
+			background-color: white;
+			color: black;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div>
+		<img src="img/hufflepuff.jpg" />
+		<p>
+			La Casa de Hufflepuff se caracteriza por valorar la capacidad de trabajo,
+			con estudiantes amigables y leales.
+			Los estudiantes de esta casa son conocidos por ser trabajadores, amigables,
+			leales y sin prejuicios.</p>
+		<p>Colores: Amarillo y negro.</p>
+		<form th:action="@{/destroy}" method="post">
+			<input type="submit" value="Volver al Inicio" />
+		</form>
+		<form th:action="@{/clasificacion}">
+			<input type="submit" value="Clasificacion" />
+		</form>
+	</div>
+</body>
+
+</html>

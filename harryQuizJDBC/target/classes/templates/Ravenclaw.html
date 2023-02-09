@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ravenclaw</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			background-image: url("img/clasificacion.jpg");
+			background-size: cover;
+			color: white;
+		}
+
+		input {
+			margin-top: 269%;
+			background: rgb(255, 255, 128);
+			border-color: black;
+		}
+
+		img {
+			max-width: 35%;
+			margin-top: 15%;
+			margin-left: 35%;
+		}
+
+		p {
+			margin-left: 40%;
+			width:25%;
+			background-color: white;
+			color: black;
+		}
+	</style>
+
+</head>
+
+<body>
+	<div>
+		<img src="img/ravenclaw.jpg" />
+		<p>
+			La Casa Ravenclaw valora el aprendizaje, la sabiduría, el ingenio,
+			y el intelecto como elementos importantes para formar parte de su casa.
+		</p>
+		<p>Colores: Azul y bronce.</p>
+		<form th:action="@{/destroy}" method="post">
+			<input type="submit" value="Volver al Inicio" />
+		</form>
+		<form th:action="@{/clasificacion}">
+			<input type="submit" value="Clasificacion" />
+		</form>
+	</div>
+</body>
+
+</html>

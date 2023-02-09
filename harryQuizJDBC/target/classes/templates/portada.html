@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Spring Boot Session Example</title>
+	<style>
+		body {
+			display: flex;
+			justify-content: center;
+			background-image: url("img/portada.jpg");
+			background-size: cover;
+		}
+
+		.name {
+			margin-top: 350%;
+			color: black;
+			border-color: black;
+		}
+		
+	</style>
+
+</head>
+
+<body>
+	<form action="#" th:action="@{/pregunta1}" method="post">
+		<input class="name" placeholder="Nombre de usuario" 
+		name="nombre" rows="1" cols="20" required></input>
+		<br>
+		<input type="submit" />
+	</form>
+</body>
+
+</html>

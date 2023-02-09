@@ -1,0 +1,62 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+
+	<style type="text/css">
+		#main_wrapper {
+			width: 60%;
+			margin: auto;
+		}
+
+		.formlibros {
+			display: block;
+			/* 	width: ; */
+		}
+
+		/*.formlibros input[type=text] {
+			width: 200px;
+		}*/
+
+		h1 {
+			text-align: center;
+			padding-bottom: 100px;
+		}
+
+		h2 {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="main_wrapper">
+		<h1>Libros disponibles</h1>
+
+
+		<div class="formLibros">
+			<h2> Modificar Libro</h2>
+			<form th:action="@{/editarlibro/{id}(id=${book.id})}" method="post">
+
+				<div class="form-group">
+					<label for="nombre">Nombre:</label> <input class="form-control" type="number" name="id"
+						th:value="${book.id}" size="40" disabled>
+				</div>
+				<div class="form-group">
+					<label for="nombre">Nombre:</label> <input class="form-control" type="text" name="nombre"
+						th:value="${book.name}" size="40">
+				</div>
+				<div class="form-group">
+
+					<label for="precio">Precio:</label> <input class="form-control" type="number" step="0.01"
+						name="precio" th:value="${book.price}" min="1">
+				</div>
+
+
+				<input class="form-control" type="submit" value="Modificar Libro">
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>

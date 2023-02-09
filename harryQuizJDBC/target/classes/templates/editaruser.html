@@ -1,0 +1,63 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+
+	<style type="text/css">
+		#main_wrapper {
+			width: 60%;
+			margin: auto;
+		}
+
+		.formlibros {
+			display: block;
+			/* 	width: ; */
+		}
+
+		h1 {
+			text-align: center;
+			padding-bottom: 100px;
+		}
+
+		h2 {
+			text-align: center;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="main_wrapper">
+		<h1>Usuarios disponibles</h1>
+
+
+		<div class="formUser">
+			<h2> Modificar Usuario</h2>
+			<form th:action="@{/editaruser/{id}(id=${user.id})}" method="post">
+
+				<div class="form-group">
+					<label for="id">ID:</label> <input class="form-control" type="number" name="id"
+						th:value="${user.id}" size="40" disabled>
+				</div>
+				<div class="form-group">
+					<label for="nombre">Nombre:</label> <input class="form-control" type="text" name="nombre"
+						th:value="${user.nombre}" size="40">
+				</div>
+				<div class="form-group">
+
+					<label for="casa">Casa:</label> <input class="form-control" type="text" name="casa"
+						th:value="${user.casa}" size="40">
+				</div>
+				<div class="form-group">
+
+					<label for="puntos">Puntos:</label> <input class="form-control" type="number" step="0.01"
+						name="puntos" th:value="${user.puntos}" min="1">
+				</div>
+
+
+				<input class="form-control" type="submit" value="Modificar Usuario">
+			</form>
+		</div>
+	</div>
+</body>
+
+</html>
